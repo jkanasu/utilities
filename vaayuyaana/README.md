@@ -29,3 +29,25 @@ Optionally there are spaces provided to record information related to
 - Departure and Destination Airports
 
 Finally print out the sheet for use during the flight.
+
+### Formulas
+#### WCA
+A close approximation is: WCA = WS * sin (AWA) * 60 / TAS
+
+#### GS
+We use cosine rule
+
+#### Sine Rule
+      a               b               c
+
+    ------    =    -------    =    -------
+    
+     sin A           sin B           sin C
+
+#### Cosine Rule
+    c = a^2 + b^2 - 2ab.cosC
+
+### References
+- [Estimating Wind Correction Angle](http://www.luizmonteiro.com/Article_Estimating_Wind_Correction_Angle_Printable.htm)
+- [Wind Correction Angle](https://flightsimnavigation.wordpress.com/2020/04/07/05-wind-correction-angle/)
+- [Triangles](https://owlcation.com/stem/Everything-About-Triangles-and-More-Isosceles-Equilateral-Scalene-Pythagoras-Sine-and-Cosine)
