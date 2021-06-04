@@ -45,7 +45,7 @@ We use cosine rule
      sin A           sin B           sin C
 
 #### Cosine Rule
-    c = a^2 + b^2 - 2ab.cosC
+    c^2 = a^2 + b^2 - 2ab.cosC
 
 ### References
 - [Estimating Wind Correction Angle](http://www.luizmonteiro.com/Article_Estimating_Wind_Correction_Angle_Printable.htm)
