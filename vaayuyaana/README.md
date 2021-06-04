@@ -32,7 +32,9 @@ Finally print out the sheet for use during the flight.
 
 ### Formulas
 #### WCA
-A close approximation is: WCA = WS * sin (AWA) * 60 / TAS
+A close approximation is:
+
+    WCA = WS * sin (AWA) * 60 / TAS
 
 #### GS
 We use cosine rule
