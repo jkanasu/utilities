@@ -1,10 +1,22 @@
 # ವಾಯುಯಾನ ಸಲಕರಣೆಗಳು - Aviation Utilities
 Some useful utilities for aviation
 
-## [XC Navigation Log](jagiNavLog.xlsx)
-All cross country flights require a navigation log. Many of website such as [SkyVector](https://skyvector.com) and [1800wxbrief](https://www.1800wxbrief.com) have utilities to generate nav logs.
+## [XC Navigation Log](../../../raw/main/vaayuyaana/jagiNavLog.xlsx)
+All cross country flights require a navigation log.
 
-This is an offline excel sheet, it reduces the effort in filling up the navigation log. In particular it does not require using an [E6B](https://en.wikipedia.org/wiki/E6B). There are many online E6B which reduce effort in filling up the nav log such as [E6B Flight Computer](https://www.gleimaviation.com/e6b-flight-computer-instructions/) and [E6B calculator](https://e6bx.com/e6b/). 
+Preparing XC logs requires some effort in terms of
+- picking check points, measuring distances and true course; done using navigation plotter on sectional chart
+- estimating winds enroute course; done using the official sources such as [aviationweather](https://aviationweather.gov)
+- deriving the TAS and GPH; done using the POH and applicable RPM, Altitude and temperature
+- calculating WCA->TH->CH, Ground Speed, times; done using the E6B
+
+### TLDR ;-)
+This is an offline excel sheet, that reduces the effort in filling up the navigation log. In particular it does not require using an [E6B](https://en.wikipedia.org/wiki/E6B)
+
+Indeed, many websites such as [SkyVector](https://skyvector.com) and [1800wxbrief](https://www.1800wxbrief.com) can generate nav logs. There are many online E6B which reduce effort in filling up the nav log such as [E6B Flight Computer](https://www.gleimaviation.com/e6b-flight-computer-instructions/) and [E6B calculator](https://e6bx.com/e6b/)
+
+But as a student pilot we need to prepare XC logs manually.
+And we need a way of manually verifying as well.
 
 ### User guide
 See legend in the sheet
@@ -17,11 +29,13 @@ Follow the below steps:
 2. Fill the check points, using a sectional chart
 3. Fill TC(True Course) measured from the sectional charts
 4. Fill DS(distance) of each leg also measured from the sectional charts
+- Note that TOC and TOD, we enter time to calculate distance, this is because of the FPM we use for climb and descent
 5. Fill MV(Magnetic Variation) from the isogenic lines in the sectional charts
-6. Look at the calculated MC(Magnetic Course) and decide on a suitable cruising altitude and fill it up
-7. Look at the POH and fill in the suitable TAS(True AirSpeed) for the selected cruising altitude, we have to consider IAS->CAS->TAS
+6. Fill MD(Magnetic Deviation) from the compass card in the aircraft
+7. Look at the calculated MC(Magnetic Course) and decide on a suitable cruising altitude and fill it up
 8. Fill in the wind direction, speed and temperature. These are obtained from [Aviation Weather Center](https://www.aviationweather.gov/windtemp/data), some interpolation will be required
-9. Fill in the MD(Magnetic Deviation) if any by looking at the correction placards for the particular aircraft(tail number)
+9. Fill in the TAS and GPH. Lookup the POH, for the selected cruising altitude. Note that we have to consider IAS->CAS->TAS AND temperature.
+10. Fill in the MD(Magnetic Deviation) if any by looking at the correction placards for the particular aircraft(tail number)
 
 Optionally there are spaces provided to record information related to
 - Weight and balance
@@ -31,22 +45,25 @@ Optionally there are spaces provided to record information related to
 Finally print out the sheet for use during the flight.
 
 ### Formulas
-#### WCA
-A close approximation is:
-
-    WCA = WS * sin (AWA) * 60 / TAS
-
-#### GS
-We use cosine rule
-
-#### Sine Rule
+#### WCA - Wind Correction Angle
+We use the Sine Rule to calculate the WCA
+##### Sine Rule
       a               b               c
 
     ------    =    -------    =    -------
     
      sin A           sin B           sin C
 
-#### Cosine Rule
+A close approximation is:
+
+            WS
+    WCA = ------ * sin (AWA) * 60
+            TAS
+
+#### GS - Ground Speed
+We use cosine rule to calculate the GS
+
+##### Cosine Rule
     c^2 = a^2 + b^2 - 2ab.cosC
 
 ### References
