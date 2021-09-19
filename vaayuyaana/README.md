@@ -71,3 +71,10 @@ We use cosine rule to calculate the GS
 - [Estimating Wind Correction Angle](http://www.luizmonteiro.com/Article_Estimating_Wind_Correction_Angle_Printable.htm)
 - [Wind Correction Angle](https://flightsimnavigation.wordpress.com/2020/04/07/05-wind-correction-angle/)
 - [Triangles](https://owlcation.com/stem/Everything-About-Triangles-and-More-Isosceles-Equilateral-Scalene-Pythagoras-Sine-and-Cosine)
+
+## [WINDS and TEMP data extraction from aviationweather.gov](../../../raw/main/vaayuyaana/getwinds.sh)
+The official source of weather information is [avaitionweather.gov](https://aviationweather.gov)
+
+We refer to [winds and temp](https://aviationweather.gov/windtemp) to get winds aloft data
+
+The [getwinds.sh](../../../raw/main/vaayuyaana/getwinds.sh) queries and generates raw data in the form of csv
