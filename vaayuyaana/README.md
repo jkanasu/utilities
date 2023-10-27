@@ -75,6 +75,6 @@ We use cosine rule to calculate the GS
 ## [WINDS and TEMP data extraction from aviationweather.gov](../../../raw/main/vaayuyaana/getwinds.sh)
 The official source of weather information is [avaitionweather.gov](https://aviationweather.gov)
 
-We refer to [winds and temp](https://aviationweather.gov/windtemp) to get winds aloft data
+We refer to [winds and temp](https://aviationweather.gov/data/api/) to get winds aloft data
 
 The [getwinds.sh](../../../raw/main/vaayuyaana/getwinds.sh) queries and generates raw data in the form of csv
